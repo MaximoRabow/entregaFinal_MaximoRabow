@@ -2,9 +2,12 @@ import React from 'react'
 
 const ItemListContainer = ({ greeting }) => {
   return (
-    <div 
-      id='greet'>{greeting}
+    <div className='contgreet'>
+      <div id='greet'>
+        {greeting}
+      </div>
     </div>
+  
   )
 }
 
