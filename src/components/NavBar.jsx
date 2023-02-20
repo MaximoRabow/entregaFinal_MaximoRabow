@@ -7,7 +7,7 @@ const NavBar = () => {
     <div id='contenedor'>
       <Menu isLazy>
         <p id='tit'>Mi APP Nombre Undefined</p>
-        <MenuButton className='button'>MENU</MenuButton>
+        <MenuButton className='button'>CATALOGO</MenuButton>
         <MenuList className="menu">
           {/* MenuItems are not rendered unless Menu is open */}
           <MenuItem>Opcion 1</MenuItem>
