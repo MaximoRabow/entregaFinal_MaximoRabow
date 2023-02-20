@@ -10,9 +10,9 @@ const NavBar = () => {
         <MenuButton className='button'>CATALOGO</MenuButton>
         <MenuList className="menu">
           {/* MenuItems are not rendered unless Menu is open */}
-          <MenuItem>Opcion 1</MenuItem>
-          <MenuItem>Opcion 2</MenuItem>
-          <MenuItem>Opcion 3</MenuItem>
+          <MenuItem>Excusiones</MenuItem>
+          <MenuItem>Eventos</MenuItem>
+          <MenuItem>Museios</MenuItem>
         </MenuList>
       </Menu>
     </div>

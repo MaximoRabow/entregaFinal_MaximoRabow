@@ -1,39 +1,37 @@
 import React from 'react'
-import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Button } from '@chakra-ui/react'
 
 const ItemDetail = () => {
   return (
     <div>
-        <Card maxW='sm'>
-        <CardBody>
-            <Image
-            src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
-            alt='Green double couch with wooden legs'
-            borderRadius='lg'
-            />
-            <Stack mt='6' spacing='3'>
-            <Heading size='md'>Living room Sofa</Heading>
-            <Text>
-                This sofa is perfect for modern tropical spaces, baroque inspired
-                spaces, earthy toned spaces and for people who love a chic design with a
-                sprinkle of vintage design.
+        <Card
+        direction={{ base: 'column', sm: 'row' }}
+        overflow='hidden'
+        variant='outline'
+        >
+        <Image
+            objectFit='cover'
+            maxW={{ base: '100%', sm: '200px' }}
+            src='https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60'
+            alt='Caffe Latte'
+        />
+
+        <Stack>
+            <CardBody>
+            <Heading size='md'>The perfect latte</Heading>
+
+            <Text py='2'>
+                Caffè latte is a coffee beverage of Italian origin made with espresso
+                and steamed milk.
             </Text>
-            <Text color='blue.600' fontSize='2xl'>
-                $450
-            </Text>
-            </Stack>
-        </CardBody>
-        <Divider />
-        <CardFooter>
-            <ButtonGroup spacing='2'>
+            </CardBody>
+
+            <CardFooter>
             <Button variant='solid' colorScheme='blue'>
-                Buy now
+                Buy Latte
             </Button>
-            <Button variant='ghost' colorScheme='blue'>
-                Add to cart
-            </Button>
-            </ButtonGroup>
-        </CardFooter>
+            </CardFooter>
+        </Stack>
         </Card>
     </div>
   )
