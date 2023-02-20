@@ -1,15 +1,24 @@
 import React from 'react'
 
-const ItemListContainer = ({ greeting }) => {
+  const ItemListContainer = () => {
+    const cargaProduct = async () => {
+          const res = await fetch ("data.json");
+          const data = await res.json();
+          console.log (data) 
+                
+  };
   
+
+
   return (
-    <div className='contgreet'>
-      <div id='greet'>
-        {greeting}
-      </div>
+    <div>
+      
     </div>
   
   )
-}
+ 
+};
+
+
 
 export default ItemListContainer
