@@ -1,14 +1,16 @@
 import React from 'react'
 
   const ItemListContainer = () => {
-    const cargaProduct = async () => {
-          const res = await fetch ("data.json");
-          const data = await res.json();
-          console.log (data) 
-                
-  };
-  
-
+    const fetchData = async () => {
+      try {
+          const res = await fetch ("data.json")
+          const data = await res.json ()
+          console.log(data)
+      } catch (error) {
+          console.log (error);
+      }
+  }
+  fetchData()
 
   return (
     <div>
