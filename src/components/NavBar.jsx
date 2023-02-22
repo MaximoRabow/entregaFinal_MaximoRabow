@@ -11,8 +11,8 @@ const NavBar = () => {
         <MenuList className="menu">
           {/* MenuItems are not rendered unless Menu is open */}
           <MenuItem>Excusiones</MenuItem>
-          <MenuItem>Eventos</MenuItem>
-          <MenuItem>Museios</MenuItem>
+          <MenuItem>Entradas</MenuItem>
+          <MenuItem>Espectaculos</MenuItem>
         </MenuList>
       </Menu>
     </div>
