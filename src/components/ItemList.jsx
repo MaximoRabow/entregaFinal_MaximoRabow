@@ -11,7 +11,7 @@ const ItemList = ({ nyc }) => {
             {nyc?.map((prod)=> (
                 <Item
                     id={prod.id}
-                    categorias={prod.categoria}
+                    categoria={prod.categoria}
                     tittle={prod.tittle}
                     detalle={prod.detalle}
                     imagen={prod.imagen}

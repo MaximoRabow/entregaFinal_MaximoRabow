@@ -1,18 +1,18 @@
 import React from 'react'
 import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Button } from '@chakra-ui/react'
 
-const Item = ({tittle, id, imagen, detalle, precio, categorias, cantidad, valoracion }) => {
+const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion }) => {
   return (
     <div>
         <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
         variant='outline'
-        >
+        id='card'>
         <Image
             objectFit='cover'
-            maxW={{ base: '100%', sm: '200px' }}
-            maxH={{ base: '100%', sm: '200px' }}
+            maxW={{ base: '100%', sm: '250px' }}
+            maxH={{ base: '100%', sm: '250px' }}
             src= {imagen}
             alt='img'
         />
@@ -23,17 +23,17 @@ const Item = ({tittle, id, imagen, detalle, precio, categorias, cantidad, valora
                 {tittle}
             </Heading>
 
-            <Text py='2'>
+            <Text py='2' id='texto'>
                 {detalle}
             </Text>
-            <Text py='2'>
-             <b>Categorias:</b> {categorias}
+            <Text py='2' id='categ'>
+             <b>Categoria:</b> {categoria}
+            </Text>
+            <Text py='2' id='valo'>
+             <b>Valoracion:</b> {valoracion}
             </Text>
             <Text py='2'>
              <b>Cantidad:</b> {cantidad}
-            </Text>
-            <Text py='2'>
-             <b>Valoracion:</b> {valoracion}
             </Text>
             <Text py='2'>
             <b>Precio:</b><span> $</span> {precio}
@@ -41,7 +41,7 @@ const Item = ({tittle, id, imagen, detalle, precio, categorias, cantidad, valora
             </CardBody>
 
             <CardFooter>
-            <Button variant='solid' colorScheme='blue'>
+            <Button variant='solid' colorScheme='blue' id='btncard'>
                 Detalle
             </Button>
             </CardFooter>

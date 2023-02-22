@@ -61,3 +61,18 @@
   margin-top: 5px;
   background-color: orange;
 }
+#card {
+  width: 1000px;
+  height: 340px;
+  margin-top: 25px;
+}
+#texto {
+  font-size: .7rem;
+}
+#categ {
+  font-size: .8rem;
+}
+#valo {
+  font-size: .8rem;
+}
+

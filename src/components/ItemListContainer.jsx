@@ -23,7 +23,7 @@ import Datos from '../data.json';
       fetchData();
     }, []);
 
-    const filtrar = Datos.filter ((prod)=> prod.categorias === categorias);
+    const filtrar = Datos.filter ((prod)=> prod.categoria === categorias);
 
   return (
     <div>
