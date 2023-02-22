@@ -1,24 +1,36 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ItemList from './ItemList';
+import Datos from '../data.json';
+
 
   const ItemListContainer = () => {
-    const fetchData = async () => {
-      try {
-          const res = await fetch ("data.json")
-          const data = await res.json ()
-          console.log(data)
-      } catch (error) {
-          console.log (error);
+    const { categorias } = useParams ();
+    const [nyc, setNyc] = useState([]);
+
+    useEffect(()=> {
+      const fetchData = async () => {
+        try {
+            const res = await fetch (Datos);
+            const data = await res.json ()
+            setNyc (data);
+        } catch (error) {
+            console.log (error);
+        }
       }
-  }
-  fetchData()
+      fetchData();
+    }, []);
+
+    const filtrar = Datos.filter ((prod)=> prod.categorias === categorias);
 
   return (
     <div>
-      
+      {categorias ? <ItemList nyc={filtrar}/> : <ItemList nyc= {Datos}/>};
     </div>
   
-  )
- 
+  );
 };
 
 

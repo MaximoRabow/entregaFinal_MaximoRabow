@@ -1,18 +1,25 @@
 
 import React from 'react'
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <div id='contenedor'>
       <Menu isLazy>
-        <p id='tit'>Mi APP Nombre Undefined</p>
-        <MenuButton className='button'>CATALOGO</MenuButton>
+        <Link to={"/"} id='tit'>Mi APP Nombre Undefined</Link>
+        <MenuButton className='button'>Categorias</MenuButton>
         <MenuList className="menu">
           {/* MenuItems are not rendered unless Menu is open */}
-          <MenuItem>Excusiones</MenuItem>
-          <MenuItem>Entradas</MenuItem>
-          <MenuItem>Espectaculos</MenuItem>
+          <Link to={`/categorias/${"Excursion"}`}>
+            <MenuItem>Excursion</MenuItem>
+          </Link>
+          <Link to={`/categorias/${"Entrada"}`}>
+            <MenuItem>Entrada</MenuItem>
+          </Link>
+          <Link to={`/categorias/${"Espectaculos"}`}>
+            <MenuItem>Espectaculos</MenuItem>
+          </Link>
         </MenuList>
       </Menu>
     </div>
