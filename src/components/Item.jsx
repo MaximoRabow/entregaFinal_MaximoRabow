@@ -11,8 +11,8 @@ const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion 
         id='card'>
         <Image
             objectFit='cover'
-            maxW={{ base: '100%', sm: '250px' }}
-            maxH={{ base: '100%', sm: '250px' }}
+            maxW={{ base: '100%', sm: '340px' }}
+            maxH={{ base: '100%', sm: '340px' }}
             src= {imagen}
             alt='img'
         />
@@ -41,7 +41,7 @@ const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion 
             </CardBody>
 
             <CardFooter>
-            <Button variant='solid' colorScheme='blue' id='btncard'>
+            <Button to={`/`} variant='solid' colorScheme='blue' id='btncard'>
                 Detalle
             </Button>
             </CardFooter>

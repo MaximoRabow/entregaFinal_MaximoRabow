@@ -17,8 +17,11 @@ const NavBar = () => {
           <Link to={`/categorias/${"Entrada"}`}>
             <MenuItem>Entrada</MenuItem>
           </Link>
-          <Link to={`/categorias/${"Espectaculos"}`}>
+          <Link to={`/categorias/${"Espectaculo"}`}>
             <MenuItem>Espectaculos</MenuItem>
+          </Link>
+          <Link to={`/categorias`}>
+            <MenuItem>All Category</MenuItem>
           </Link>
         </MenuList>
       </Menu>
