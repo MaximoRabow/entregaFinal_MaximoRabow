@@ -11,15 +11,15 @@ const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion 
         id='card'>
         <Image
             objectFit='cover'
-            maxW={{ base: '100%', sm: '340px' }}
-            maxH={{ base: '100%', sm: '340px' }}
+            maxW={{ base: '100%', sm: '280px' }}
+            maxH={{ base: '100%', sm: '280px' }}
             src= {imagen}
             alt='img'
         />
 
         <Stack>
             <CardBody>
-            <Heading size='md'>
+            <Heading size='md' id='titulocard'>
                 {tittle}
             </Heading>
 
@@ -32,10 +32,10 @@ const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion 
             <Text py='2' id='valo'>
              <b>Valoracion:</b> {valoracion}
             </Text>
-            <Text py='2'>
+            <Text py='2' id='cant'>
              <b>Cantidad:</b> {cantidad}
             </Text>
-            <Text py='2'>
+            <Text py='2' id='precio'>
             <b>Precio:</b><span> $</span> {precio}
             </Text>
             </CardBody>

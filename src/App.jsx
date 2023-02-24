@@ -4,6 +4,7 @@ import ItemListContainer from "./components/ItemListContainer"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Welcome from "./components/Welcome"
 import Cart from "./components/Cart"
+import Footer from "./components/Footer"
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/categorias" element={<ItemListContainer/>}/>
           <Route exact path="/cart" element={<Cart/>}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
   );
 }

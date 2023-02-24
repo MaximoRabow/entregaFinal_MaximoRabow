@@ -26,12 +26,12 @@ import Datos from '../data.json';
     const filtrar = Datos.filter ((prod)=> prod.categoria === categorias);
 
   return (
-    <div>
+    <div id='main'>
       {categorias ? <ItemList nyc={filtrar}/> : <ItemList nyc= {Datos}/>};
     </div>
   
-  );
-};
+  )
+}
 
 
 

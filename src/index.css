@@ -46,33 +46,47 @@
   right: 35px;
   top: 7px;
 }
-.contgreet {
-  display: flex;
-  justify-content: center;
-}
-#greet {
-  font-weight: bold;
-  color: brown;
-  border: 2px solid black;
-  border-radius: 5%;
-  width: 80%;
-  height: 200px;
-  text-align: center;
-  margin-top: 5px;
-  background-color: orange;
-}
 #card {
   width: 1000px;
-  height: 340px;
+  height: 280px;
   margin-top: 25px;
+  background-color: white;
+}
+#card:hover {
+  border-width: 2px;
+}
+#titulocard {
+  margin-top: -15px;
+  font-size: 1rem;
 }
 #texto {
   font-size: .7rem;
+  margin-bottom: -10px;
 }
 #categ {
   font-size: .8rem;
+  margin-bottom: -10px;
 }
 #valo {
   font-size: .8rem;
+  margin-bottom: -10px;
 }
+#cant {
+  font-size: .8rem;
+  margin-bottom: -10px;
+}
+#btncard {
+  margin-top: -50px;
 
+}
+.footer {
+  background-color: blueviolet;
+  height: 150px;
+  width: 100vw;
+}
+#main {
+  background-color: whitesmoke;
+}
+#root {
+  background-color: whitesmoke;
+}
