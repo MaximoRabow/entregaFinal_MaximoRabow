@@ -1,12 +1,8 @@
-import ItemCounter from './ItemCounter';
+import React from 'react'
 
 const ItemDetail = () => {
   return (
-    <div>
-        
-
-
-    </div>
+    <div>ItemDetail</div>
   )
 }
 
