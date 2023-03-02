@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Cart = () => {
+const ItemCounter = () => {
   return (
     <div>
-        
 
+
+        
     </div>
   )
 }
 
-export default Cart
+export default ItemCounter

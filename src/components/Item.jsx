@@ -1,7 +1,9 @@
 import React from 'react'
 import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Button } from '@chakra-ui/react'
+import ItemDetail from './ItemDetail'
+import { Link } from 'react-router-dom'
 
-const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion }) => {
+const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion ,id }) => {
   return (
     <div>
         <Card
@@ -41,8 +43,8 @@ const Item = ({tittle, imagen, detalle, precio, categoria, cantidad, valoracion 
             </CardBody>
 
             <CardFooter>
-            <Button to={`/`} variant='solid' colorScheme='blue' id='btncard'>
-                Detalle
+            <Button variant='solid' colorScheme='blue' id='btncard'>
+                <Link to={`/item/${id}`}>Detalle</Link>
             </Button>
             </CardFooter>
         </Stack>
