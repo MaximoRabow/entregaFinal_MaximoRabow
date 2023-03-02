@@ -1,5 +1,6 @@
-import { Box, useState } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React from 'react'
+import { useState } from 'react';
 
 
 const ItemCounter = () => {
