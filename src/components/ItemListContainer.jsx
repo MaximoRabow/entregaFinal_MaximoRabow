@@ -1,34 +1,29 @@
-import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
-import Datos from '../data.json';
-
-
+import {collection, getDocs, getFirestore} from "firebase/firestore";
+import { useParams } from 'react-router-dom';
 
   const ItemListContainer = () => {
-    const { categorias } = useParams ();
     const [nyc, setNyc] = useState([]);
+    const { categorias } = useParams ();
 
     useEffect(()=> {
-      const fetchData = async () => {
-        try {
-            const res = await fetch (Datos);
-            const data = await res.json ()
-            setNyc (data);
-        } catch (error) {
-            console.log (error);
-        }
-      }
-      fetchData();
-    }, []);
+      const db = getFirestore ();
+      const prodCollection = collection (db, "productos");
+      getDocs (prodCollection).then ((snapshot) => {
+        const nyc = snapshot.docs.map ((doc) => ({
+          ...doc.data (),
+          id: doc.id
+        }));
+        setNyc (nyc);
+      })}, []);
 
-    const filtrar = Datos.filter ((prod)=> prod.categoria === categorias);
+    const filtrar = nyc.filter ((prod)=> prod.categoria === categorias);
 
   return (
     <div id='main'>
-      {categorias ? <ItemList nyc={filtrar}/> : <ItemList nyc= {Datos}/>};
+      {categorias ? <ItemList nyc={filtrar}/> : <ItemList nyc= {nyc}/>};
     </div>
   
   )

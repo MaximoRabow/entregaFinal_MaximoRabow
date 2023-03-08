@@ -4,30 +4,27 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import ItemDetail from './ItemDetail';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
   const { id } = useParams ();
-  
-
-  const [nyc, setNyc] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect (() => {
-    const fetchData = async () => {
-      try {
-          const res = await fetch (Datos);
-          const data = await res.json ();
-          setNyc (data);
-      } catch (error) {
-          console.log (error);
-      }
-    }
-    fetchData();
+    const db = getFirestore ();
+    const prodCollection = collection (db, "productos");
+    getDocs (prodCollection).then ((snapshot) => {
+      const nyc = snapshot.docs.map ((doc) => ({
+        ...doc.data (),
+        id: doc.id,
+      }));
+      setData (nyc);
+    });
 
-  }, []);
 
-  const filtrar = Datos.filter ((prod)=> prod.id === id);
-
-  return <ItemDetail nyc={Datos} />; 
+  }, [])
+    
+  return <ItemDetail nyc={data} />; 
 }
 
 export default ItemDetailContainer
