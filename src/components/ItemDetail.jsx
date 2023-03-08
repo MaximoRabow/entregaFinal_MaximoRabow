@@ -11,6 +11,7 @@ const ItemDetail = ({nyc}) => {
     <>
       {filtrar.map ((prod) => (
         <div key={prod.id}>
+          <img src={prod.imagen} alt="" />
           <Box>{prod.imagen}</Box>
           <Box>{prod.detalle}</Box>
           <Box>{prod.precio}</Box>
