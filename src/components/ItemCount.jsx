@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 
 
-const ItemCounter = () => {
+const ItemCount = () => {
   const [valor, setValor] = useState (0);
 
   const sum = () => {
@@ -29,4 +29,4 @@ const ItemCounter = () => {
   )
 }
 
-export default ItemCounter
+export default ItemCount

@@ -22,7 +22,7 @@
 
 .button {
   border: 2px solid lightgrey;
-  border-radius: 15%;
+  border-radius: 5px;
   padding: 3px;
   margin-top: -5px;
 }
@@ -89,4 +89,95 @@
 }
 #root {
   background-color: whitesmoke;
+}
+
+/* ItemDetail */
+
+.detailcont {
+  height: 100vh;
+  background-color: whitesmoke;
+}
+
+#contpromo {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  margin: 15px;
+}
+
+#contimg {
+  width: 40%;
+  position: absolute;
+  position: absolute;
+  left: 100px;
+  top: 130px;
+  
+}
+
+#detailImagen {
+  border-radius: 20px;
+}
+
+#conttit {
+  width: 40%;
+  position: absolute;
+  right: 100px;
+  top: 130px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.detailTittle {
+  font-size: 30px;
+}
+
+#contdet {
+  width: 40%;
+  position: absolute;
+  right: 100px;
+  top: 185px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: start;
+  padding: 10px;
+}
+
+.detailDetalle {
+  font-size: 20px;
+}
+
+#contval {
+  width: 40%;
+  position: absolute;
+  right: 100px;
+  top: 365px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: start;
+  padding: 10px;
+}
+
+
+#contpres {
+  width: 40%;
+  position: absolute;
+  right: 100px;
+  top: 420px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: start;
+  padding: 10px;
+}
+
+#contbtn {
+  width: 40%;
+  position: absolute;
+  right: 100px;
+  top: 475px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
 }
