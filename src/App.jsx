@@ -4,13 +4,16 @@ import ItemListContainer from "./components/ItemListContainer"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Welcome from "./components/Welcome"
 import Footer from "./components/Footer"
-import Cart from "./components/CartWidget"
+import Cart from "./components/Cart"
 import ItemDetailContainer from "./components/ItemDetailContainer"
+import { ShoppingCartProvider } from "./Context/CartContext"
+
 
 
 
 function App() {
   return (
+    <ShoppingCartProvider>
       <BrowserRouter>
         <NavBar/>
         <CartWidget/>
@@ -23,6 +26,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
+    </ShoppingCartProvider>
   );
 }
 

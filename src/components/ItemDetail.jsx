@@ -2,12 +2,17 @@ import { useParams } from 'react-router-dom'
 import {  Box } from '@chakra-ui/react'
 import { Button } from '@chakra-ui/react'
 import ItemCount from './ItemCount'
-
+import { useEffect, useState } from 'react'
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetail = ({nyc}) => {
   const {id} = useParams ();
 
+  const [prod, setProd] = useState ([]);
+
   const filtrar = nyc.filter ((prod)=> prod.id === id);
+
+  
 
   return (
     <>
@@ -33,10 +38,17 @@ const ItemDetail = ({nyc}) => {
             <Box className='detailPre'><span><b>Precio: $</b> </span>{prod.precio}</Box>
           </div>
           <div id='contbtn'>
-            <Button colorScheme='teal' size='md'>AGREGAR A CARRITO</Button>
+          <ItemCount 
+          cantidad = {prod.cantidad}
+          id = {prod.id}
+          precio = {prod.precio}
+          tittle = {prod.tittle}
+          />
           </div>
           <div>
+           
             
+             
           </div>
         </div>
       ))}

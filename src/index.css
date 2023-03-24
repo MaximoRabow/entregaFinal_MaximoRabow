@@ -181,3 +181,15 @@
   text-align: center;
   padding: 10px;
 }
+
+/* Cart */
+
+.cartcontainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.detallecont {
+  padding: 2.5%;
+}
