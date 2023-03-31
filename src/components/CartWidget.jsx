@@ -5,8 +5,8 @@ import { CartContext } from '../Context/CartContext';
 const CartWidget = () => {
   const [cart, setCart] = useContext (CartContext);
 
-  const cantidades = cart.reduce ((acc, curr) => {
-    return acc + curr.cantidades
+  const cantidad = cart.reduce ((acc, curr) => {
+    return acc + curr.cantidad
   }, 0);
 
   return (
@@ -16,7 +16,7 @@ const CartWidget = () => {
           shopping_cart
         </span>
       </Link>
-        <p id='num'>{cantidades}</p>
+        <p id='num'>{cantidad}</p>
        
     </div>
   )

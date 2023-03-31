@@ -1,58 +1,58 @@
-import { useState, useContext } from "react"
+import { useContext, useState } from "react"
 import { CartContext } from '../Context/CartContext';
-import {
-  Button,
-  Container,
-  Center,
-  Heading,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Text,
-  chakra, Box
-} from "@chakra-ui/react";
+import { Center, Heading, Text } from "@chakra-ui/react";
+import { CloseButton, Stack } from '@chakra-ui/react'
+import SendOrder from "./SendOrder";
+
 
 
 const Cart = () => {
   const [cart, setCart] = useContext (CartContext);
 
-  const precioTotal = () => {
-    prod.cantidad * prod.precio
-  }
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState(""); 
   
   return (
     <>
       <Center h="100px" color="black">
-        <Heading as="h2" size="2xl">
+        <Heading as="h3" size="2xl">
           Finaliza tu compra aqui!
         </Heading>
       </Center>
       <div className="cartcontainer">
-        <Heading className="detallecont">PRODUCTO</Heading>
-        <Heading className="detallecont">CANTIDAD</Heading>
-        <Heading className="detallecont">PRECIO UNITARIO</Heading>
-        <Heading className="detallecont">PRECIO TOTAL</Heading>
+        <Text className="detallecont">PRODUCTO</Text>
+        <Text className="detallecont">PRECIO UNITARIO</Text>
+        <Text className="detallecont">CANTIDAD</Text>
+        <Text className="detallecont">PRECIO TOTAL</Text>
+        <Text className="detallecont">ELIMINAR</Text>
       </div>
       
       {cart.map((prod) => {
         return (  
           <div key={prod.id}>
-            <div className="cartcontainer">
-              <Text>{prod.tittle}</Text>
-              <Text>{prod.cantidades}</Text>
-              <Text>{prod.precio}</Text>
-
-                
+            <div className="prodcontainer">
+              <div>
+                <Text className="prodcont">{prod.tittle}</Text>
+              </div>
+              <div>
+                <Text className="prodcont">USD {prod.precio}</Text>
+              </div>
+              <div>
+                <Text className="prodcont">{prod.cantidades}</Text>
+              </div>  
+              <div>
+              <Stack direction='row' spacing={6}>
+                <CloseButton size='md' />
+              </Stack>
+              </div>
             </div>
           </div>
          
         );
       })}
-      
+      <SendOrder/>
     </>
   )
 }
 
-export default Cart
+export default Cart;

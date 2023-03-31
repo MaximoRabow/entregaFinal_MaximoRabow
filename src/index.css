@@ -188,8 +188,25 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  background-color: grey;
 }
 
 .detallecont {
-  padding: 2.5%;
+  padding-left: 6%;
+  padding-right: 6%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.prodcontainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.prodcont {
+  padding-left: 8%;
+  padding-right: 8%;
+  font-size: 16px;
+  width: 300px;
 }
