@@ -12,6 +12,14 @@ const Cart = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState(""); 
   
+const removeItem = () => {
+  setCart (() => {
+    
+  })
+}
+
+
+
   return (
     <>
       <Center h="100px" color="black">

@@ -34,39 +34,32 @@ const SendOrder = () => {
   return (
     <div>
       <Center>
-        <Heading>Sending orders</Heading>
+        <Heading m={6} >Completa los datos para recibir el ID de tu compra</Heading>
       </Center>
 
       <Container>
         <FormControl>
           <form onSubmit={handleSubmit}>
             <FormLabel>NAME</FormLabel>
-            <Input size="lg" onChange={(e) => setName(e.target.value)} />
+            <Input size="md" onChange={(e) => setName(e.target.value)} />
             <FormLabel>EMAIL</FormLabel>
-            <Input size="lg" onChange={(e) => setEmail(e.target.value)} />
-            <Button colorScheme="blue" type="submit" m={5}>
-              Send Infomation
-            </Button>
+            <Input size="md" onChange={(e) => setEmail(e.target.value)} />
+            <Center>
+                <Button colorScheme="red" type="submit" m={5}>
+                    CONFIRMAR COMPRA
+                </Button>
+            </Center>
           </form>
         </FormControl>
       </Container>
       <Center>
-        <Text as="b" m={3} fontSize="xl">
+        <Text as="b" m={3} fontSize="ms">
           Order ID:{" "}
         </Text>
         <Text as="mark" fontSize="2xl">
           {orderId}
         </Text>
       </Center>
-       
-
-
-
-
-
-
-
-
     </div>
   )
 }

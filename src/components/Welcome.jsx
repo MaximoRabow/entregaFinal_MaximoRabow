@@ -4,12 +4,12 @@ import React from 'react'
 const Welcome = () => {
   return (
     <div>
-       <Center>
         <Box>
-            <Image src="" alt="nyc"/>
+            <Image src="https://4kwallpapers.com/images/wallpapers/new-york-city-skyline-skyscrapers-cityscape-sunset-evening-2880x1800-35.jpg" alt="nyc"/>
         </Box>
-       </Center>
+        <Box className='text-welcome'>Ney York city</Box>
     </div>
+  
   )
 }
 
