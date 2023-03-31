@@ -12,11 +12,14 @@ const Cart = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState(""); 
   
-const removeItem = () => {
-  setCart (() => {
-    
-  })
-}
+  const deleteItem = prod => {  
+    const results = allProducts.filter (
+      item => item.id !== prod.id
+    );
+    setAllProducts (results);
+
+localStorage.setItem ('cart', JSON.stringify (prod));
+};
 
 
 
@@ -49,9 +52,9 @@ const removeItem = () => {
                 <Text className="prodcont2">{prod.cantidad}</Text>
               </div>  
               <div>
-              <Stack className="prodcont4" direction='row' spacing={6}>
-                <CloseButton size='md' />
-              </Stack>
+                <Stack className="prodcont4" direction='row' spacing={6}>
+                  <CloseButton size='md'/>
+                </Stack>
               </div>
             </div>
           </div>
