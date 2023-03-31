@@ -43,13 +43,13 @@ const removeItem = () => {
                 <Text className="prodcont">{prod.tittle}</Text>
               </div>
               <div>
-                <Text className="prodcont">USD {prod.precio}</Text>
+                <Text className="prodcont1">USD {prod.precio}</Text>
               </div>
               <div>
-                <Text className="prodcont">{prod.cantidades}</Text>
+                <Text className="prodcont2">{prod.cantidad}</Text>
               </div>  
               <div>
-              <Stack direction='row' spacing={6}>
+              <Stack className="prodcont4" direction='row' spacing={6}>
                 <CloseButton size='md' />
               </Stack>
               </div>
