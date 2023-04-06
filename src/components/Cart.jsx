@@ -11,15 +11,8 @@ const Cart = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState(""); 
-  
-  const deleteItem = prod => {  
-    const results = allProducts.filter (
-      item => item.id !== prod.id
-    );
-    setAllProducts (results);
 
-localStorage.setItem ('cart', JSON.stringify (prod));
-};
+  const deteleCartItem = useContext (CartContext);
 
 
 
@@ -50,10 +43,13 @@ localStorage.setItem ('cart', JSON.stringify (prod));
               </div>
               <div>
                 <Text className="prodcont2">{prod.cantidad}</Text>
-              </div>  
+              </div> 
+              <div>
+                <Text className="prodcont3">USD {prod.precio * prod.cantidad}</Text>
+              </div> 
               <div>
                 <Stack className="prodcont4" direction='row' spacing={6}>
-                  <CloseButton size='md'/>
+                  <CloseButton size='md' onClick={() => deleteItemCart (prod.id)}/>
                 </Stack>
               </div>
             </div>
@@ -64,6 +60,6 @@ localStorage.setItem ('cart', JSON.stringify (prod));
       <SendOrder/>
     </>
   )
-}
+};
 
 export default Cart;
